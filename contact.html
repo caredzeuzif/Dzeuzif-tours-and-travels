@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Dzeuzif Tours and Travels for inquiries or to plan your next adventure.">
+    <meta name="keywords" content="contact, Dzeuzif, tours, travel, Kenya">
+    <title>Contact - Dzeuzif Tours and Travels</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Dzeuzif Tours</div>
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#tours">Tours</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <p>Have questions or ready to plan your next adventure? Reach out to us!</p>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <h2>Our Details</h2>
+            <p>Email: info@dzeuziftours.com</p>
+            <p>Phone: +123-456-7890</p>
+            <p>Address: 123 Travel Lane, Nairobi, Kenya</p>
+        </div>
+        <div id="map" style="height: 300px; margin-top: 2rem;"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dzeuzif Tours and Travels. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>

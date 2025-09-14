@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dzeuzif Tours and Travels offers unique travel experiences in Kenya and beyond.">
+    <meta name="keywords" content="tours, travel, Kenya, safari, coastal, Dzeuzif">
+    <title>Dzeuzif Tours and Travels</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Dzeuzif Tours</div>
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#tours">Tours</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Explore the World with Dzeuzif Tours</h1>
+        <p>Discover unforgettable adventures and unique experiences.</p>
+        <button onclick="scrollToTours()">View Tours</button>
+    </section>
+
+    <!-- Tours Section -->
+    <section id="tours" class="tours">
+        <h2>Our Featured Tours</h2>
+        <!-- Search and Filters -->
+        <div class="tour-controls">
+            <input type="text" id="searchBar" placeholder="Search tours..." oninput="searchTours()">
+            <select id="filterCategory" onchange="filterTours()">
+                <option value="all">All Categories</option>
+                <option value="safari">Safari</option>
+                <option value="coastal">Coastal</option>
+            </select>
+        </div>
+        <div class="tour-container">
+            <div class="tour-card" data-category="safari">
+                <img src="images/destination.jpg" alt="Safari Adventure">
+                <h3>Kenyan Safari Adventure</h3>
+                <p>5 Days, $1200</p>
+                <p>Experience the Maasai Mara with expert guides.</p>
+                <button onclick="openBookingForm('Kenyan Safari Adventure')">Book Now</button>
+            </div>
+            <div class="tour-card" data-category="coastal">
+                <img src="images/destination.jpg" alt="Coastal Escape">
+                <h3>Mombasa Coastal Escape</h3>
+                <p>3 Days, $600</p>
+                <p>Relax on pristine beaches and explore historic sites.</p>
+                <button onclick="openBookingForm('Mombasa Coastal Escape')">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form (Modal) -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBookingForm()">&times;</span>
+            <h2>Book Your Tour</h2>
+            <form id="bookingForm">
+                <label for="tourName">Tour:</label>
+                <input type="text" id="tourName" readonly>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="date">Travel Date:</label>
+                <input type="date" id="date" required>
+                <button type="submit">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dzeuzif Tours and Travels. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
