@@ -24,7 +24,7 @@ header {
     font-size: 1.5rem;
     background: none;
     border: none;
-    color: white;
+    color: blue;
     cursor: pointer;
 }
 
@@ -59,7 +59,7 @@ nav a {
 .hero button {
     padding: 0.8rem 1.5rem;
     background-color: #28a745;
-    color: white;
+    color: blue;
     border: none;
     cursor: pointer;
     font-size: 1rem;
